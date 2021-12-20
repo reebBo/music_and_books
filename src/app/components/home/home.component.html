@@ -1,0 +1,73 @@
+<div class="container">
+
+    <div class="btn-group dropright pt-5">
+        <button class="btn btn-outline-secondary text-white dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Search resources
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <input class="form-control" type="text" placeholder="Search for a Book" id="searchBook"
+                (keyup)="filterBooks($event)">
+            <input class="form-control" type="text" placeholder="Search for a Song" id="searchSong"
+                (keyup)="filterSongs($event)">
+            <input class="form-control" type="text" placeholder="Search for Both " id="searchAll"
+                (keyup)="filterAll($event)">
+        </div>
+        <button *ngIf="" class="btn btn-sm btn-outline-secondary text-white" type="button">
+            See results
+        </button>
+    </div>
+
+
+
+    <div id="searchResult" *ngIf="filtered.length!=0; else shortList" class="px-5 py-4">
+        <div *ngFor="let elem of filtered">
+            <ng-template [ngIf]="elem.artist" class="row">
+                <div class="col-sm-6 d-block m-0 p-0">
+                    <p> <img class="img-fluid" src="assets/headphones.png" alt="headphones"> {{elem.song}}
+                        -{{elem.artist}}</p>
+                </div>
+            </ng-template>
+
+            <ng-template [ngIf]="elem.author" class="row">
+                <div class="col-sm-6 d-block m-0 p-0">
+                    <p> <img class="img-fluid" src="assets/book.png" alt="book"> {{elem.title}} -{{elem.author}}</p>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+
+
+    <ng-template #shortList>
+        <div id="shortList" class="border px-5 py-4">
+            <h4 class="pb-2"> Latest resources</h4>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <span *ngFor="let s of songs| slice:-3">
+                        <p> <img class="img-fluid" src="assets/headphones.png" alt="headphones"> {{s.song}}
+                            -{{s.artist}}</p>
+                    </span>
+                    <button class="btn btn-sm btn-outline-secondary text-white" type="button" routerLink="/music">
+                        Go to Songs
+                    </button>
+                </div>
+
+                <div class="col-sm-6">
+                    <span *ngFor="let b of books| slice:-3">
+                        <p> <img class="img-fluid" src="assets/book.png" alt="book"> {{b.title}}- {{b.author}}</p>
+                    </span>
+                    <button class="btn btn-sm btn-outline-secondary text-white" type="button" routerLink="/books">
+                        Go to Books
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+
+
+
+
+
+</div>

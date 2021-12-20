@@ -1,0 +1,72 @@
+[
+    {
+        "title":"To Kill a Mockingbird",
+        "author":"Harper Lee",
+        "year":"1960",
+        "language":"english",
+        "topic":"the novel’s about racism in the American South"
+    },
+    {
+        "title":"The Great Gatsby",
+        "author":"F. Scott Fitzgerald",
+        "year":"1925",
+        "language":"english",
+        "topic":"the novel’s about interactions with mysterious millionaire Jay Gatsby"
+    },
+    {
+        "title":"Ulysses",
+        "author":"James Joyce",
+        "year":"1922",
+        "language":"english",
+        "topic":"the novel’s about Odysseus’s journey home after the Trojan War"
+    },
+    {
+        "title":"The Catcher in the Rye",
+        "author":"J. D Salinger",
+        "year":"1951",
+        "language":"english",
+        "topic":"the novel’s about the loss of innocence"
+    },
+    {
+        "title":"Pride and Prejudice",
+        "author":"Jane Austen",
+        "year":"1813",
+        "language":"english",
+        "topic":"the novel’s about the turbulent relationship between Fitzwilliam Darcy and Elizabeth Bennet, the daughter of a country gentleman"
+    },
+    {
+        "title":"Adventures of Huckleberry Finn",
+        "author":"Mark Twain",
+        "year":"1884",
+        "language":"english",
+        "topic":"the novel’s central character and narrator runs away from his abusive father, together with his companion, Jim the runaway slave"
+    },
+    {
+        "title":"Alice’s Adventure in Wonderland",
+        "author":"Lewis Carroll",
+        "year":"1862",
+        "language":"english",
+        "topic":"the novel’s about teaching moral lessons"
+    },
+    {
+        "title":"To the Lighthouse",
+        "author":"Virginia Woolf",
+        "year":"1920",
+        "language":"english",
+        "topic":"the novel’s around the Ramsay Family, as well as their visits to the Isle of Skye in Scotland between 1910 and 1920"
+    },
+    {
+        "title":"The Sound and the Fury",
+        "author":"William Faulkner.",
+        "year":"1929",
+        "language":"english",
+        "topic":"the novel’s around the Compson family, former Southern aristocrats who are facing a hard time dealing with the dissolution of their family and its reputation"
+    },
+    {
+        "title":"Nineteen Eighty-four",
+        "author":"George Orwell",
+        "year":"1949",
+        "language":"english",
+        "topic":"the novel’s a warning against totalitarianism"
+    }
+]

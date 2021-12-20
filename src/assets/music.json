@@ -1,0 +1,82 @@
+[
+    {
+        "song":"Manuela",
+        "artist":"Julio Iglesias",
+        "album":"A flor de piel",
+        "genre":"pop",
+        "language":"spanish",
+        "year":"1974 "
+    },
+    {
+        "song":"Drive",
+        "artist":"Julio Iglesias",
+        "album":"Romantic Classics",
+        "genre":"pop",
+        "language":"english",
+        "year":"2006"
+    },
+    {
+        "song":"Un Uomo Solo",
+        "artist":"Julio Iglesias",
+        "album":"Tutto l'amore che ti manca",
+        "genre":"pop",
+        "language":"italian",
+        "year":"1987"
+    },
+    {
+        "song":"La cumparsita",
+        "artist":"Julio Iglesias",
+        "album":"Tango",
+        "genre":"tango",
+        "language":"spanish",
+        "year":"1996"
+    },
+    {
+        "song":"Always on My Mind",
+        "artist":"Julio Iglesias",
+        "album":"Romantic Classics",
+        "genre":"balad",
+        "language":"english",
+        "year":"2006"
+    },
+    {
+        "song":"Se Mi Dai Una Mano Tu",
+        "artist":"Julio Iglesias",
+        "album":"Tutto l'amore che ti manca",
+        "genre":"pop",
+        "language":"italian",
+        "year":"1987"
+    },
+    {
+        "song":"Amor, Amor, Amor",
+        "artist":"Julio Iglesias",
+        "album":"Momenti",
+        "genre":"pop",
+        "language":"italian",
+        "year":"1982"
+    },
+    {
+        "song":"Por Ella",
+        "artist":"Julio Iglesias",
+        "album":"Hey!",
+        "genre":"pop",
+        "language":"spanish",
+        "year":"1980"
+    },
+    {
+        "song":"Nathalie",
+        "artist":"Julio Iglesias",
+        "album":"Momenti",
+        "genre":"pop",
+        "language":"italian",
+        "year":"1982"
+    },
+    {
+        "song":"Te Quiero Así",
+        "artist":"Julio Iglesias",
+        "album":"A flor de piel",
+        "genre":"pop",
+        "language":"spanish",
+        "year":"1974"
+    }
+]

@@ -1,0 +1,26 @@
+<ng-template [ngIf]="songDetails" class="col-sm-12">
+
+
+    <!-- <div *ngIf="songDetails; else bookDetails" class="col-sm-12"> -->
+
+    <div class="border-left mt-5 p-4 w-100" *ngFor="let elem of songDetails">
+        <p class="mr-5 h3">DETAILS</p>
+        <p>Title: {{elem.song}}</p>
+        <p>Singer: {{elem.artist}}</p>
+        <p>Genre: {{elem.genre}}</p>
+        <p>Language: {{elem.language}}</p>
+        <p>Year: {{elem.year}}</p>
+    </div>
+
+</ng-template>
+<ng-template [ngIf]="bookDetails" class="col-sm-12">
+    <!-- <ng-template #bookDetails class="col-sm-12"> -->
+    <div class="border-left mt-5 p-4 w-100" *ngFor="let elem of bookDetails">
+        <p class="mr-5 h3">DETAILS</p>
+        <p>Title: {{elem.title}}</p>
+        <p>Author: {{elem.author}}</p>
+        <p>Topic: {{elem.topic}}</p>
+        <p>Language: {{elem.language}}</p>
+        <p>Year: {{elem.year}}</p>
+    </div>
+</ng-template>
