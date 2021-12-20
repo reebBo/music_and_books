@@ -48,18 +48,7 @@ export class HomeComponent implements OnInit {
       event.target.value = '';
     }
   }
-  // ngOnInit(): void {
-  //   this.sharedService.btnClicked.subscribe(btnStatus => {
-  //       this.btnSt = btnStatus;
-  //   })
-  ngOnInit(): void {
-    this.sharedS.currentArrayForRoute.subscribe((val) => {
-      this.filtered = [];
-    });
 
-    this.retrieveSongs();
-    this.retrieveBooks();
-  }
   retrieveSongs() {
     this.rs.getSongs().subscribe((songs: any) => {
       this.songs = songs;
@@ -75,5 +64,14 @@ export class HomeComponent implements OnInit {
     this.router
       .navigateByUrl('/', { skipLocationChange: true })
       .then(() => this.router.navigate([uri]));
+  }
+
+  ngOnInit(): void {
+    this.sharedS.currentArrayForRoute.subscribe(() => {
+        this.filtered = [];
+    });
+
+    this.retrieveSongs();
+    this.retrieveBooks();
   }
 }

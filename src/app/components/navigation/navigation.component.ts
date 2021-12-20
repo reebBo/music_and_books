@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component } from '@angular/core'; 
 import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
@@ -6,13 +6,11 @@ import { SharedService } from 'src/app/services/shared.service';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 
   constructor(private sharedS:SharedService) { }
 
-  ngOnInit(): void { } 
-
   resetHome(){
-    this.sharedS.updateArrayForRoute(0);
+    this.sharedS.updateArrayForRoute('');
   }
 }

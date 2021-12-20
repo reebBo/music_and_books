@@ -21,7 +21,7 @@ export class SharedService {
     this.songs.next(newSongs);
   }
 
-  private arrayForRoute = new BehaviorSubject(0);
+  private arrayForRoute = new BehaviorSubject('');
   currentArrayForRoute = this.arrayForRoute;
   updateArrayForRoute(newArrayForRoute: any) {
     this.arrayForRoute.next(newArrayForRoute);
