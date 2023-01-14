@@ -1,5 +1,17 @@
 <div class="container">
+    <input type="text" [formControl]="searchControl" placeholder="  Search" />
 
+
+    <div *ngIf="filterVal$ | async as filterValues; else default">
+        Filtered values
+        <app-music [filterValues]="filterVal$"></app-music>
+    </div>
+    <ng-template #default> 
+      Unfiltered values
+        <app-music></app-music>
+    </ng-template>
+    <!-- oooo -->
+    <br>
     <div class="btn-group dropright pt-5">
         <button class="btn btn-outline-secondary text-white dropdown-toggle" type="button" id="dropdownMenuButton"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,5 +75,5 @@
                 </div>
             </div>
         </div>
-    </ng-template> 
+    </ng-template>
 </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { ResourcesService } from 'src/app/services/resources.service';
 import { SharedService } from 'src/app/services/shared.service';
 
@@ -9,6 +11,19 @@ import { SharedService } from 'src/app/services/shared.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  searchControl: FormControl = new FormControl('');
+  filterVal$ = this.searchControl.valueChanges;
+
+  ngOnInit(): void {
+  
+    this.sharedS.currentArrayForRoute.subscribe(() => {
+      this.filtered = [];
+    });
+
+    // this.retrieveSongs();
+    // this.retrieveBooks();
+  }
+
   songs: any[] = [];
   books: any[] = [];
 
@@ -21,7 +36,7 @@ export class HomeComponent implements OnInit {
     private sharedS: SharedService,
     private router: Router,
     private rs: ResourcesService
-  ) {}
+  ) { }
 
   filterBooks(event: any) {
     let input = event.target.value;
@@ -49,29 +64,21 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  retrieveSongs() {
-    this.rs.getSongs().subscribe((songs: any) => {
-      this.songs = songs;
-    });
-  }
-  retrieveBooks() {
-    this.rs.getBooks().subscribe((books: any) => {
-      this.books = books;
-    });
-  }
+  // retrieveSongs() {
+  //   this.rs.getSongs().subscribe((songs: any) => {
+  //     this.songs = songs;
+  //   });
+  // }
+  // retrieveBooks() {
+  //   this.rs.getBooks().subscribe((books: any) => {
+  //     this.books = books;
+  //   });
+  // }
 
-  redirectTo(uri: string) {
-    this.router
-      .navigateByUrl('/', { skipLocationChange: true })
-      .then(() => this.router.navigate([uri]));
-  }
+  // redirectTo(uri: string) {
+  //   this.router
+  //     .navigateByUrl('/', { skipLocationChange: true })
+  //     .then(() => this.router.navigate([uri]));
+  // }
 
-  ngOnInit(): void {
-    this.sharedS.currentArrayForRoute.subscribe(() => {
-        this.filtered = [];
-    });
-
-    this.retrieveSongs();
-    this.retrieveBooks();
-  }
 }
