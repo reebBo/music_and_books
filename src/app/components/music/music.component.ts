@@ -13,24 +13,24 @@ export class MusicComponent implements OnInit {
   filteredSongs$!: Observable<any>;
   songs: any = [];
   selectedSongObj: any[] = [];
-  valueArray!: any;
   constructor(private rs: ResourcesService) { }
 
   ngOnInit(): void {
 
     if (this.filterValues != undefined) {
-      this.filteredSongs$ = combineLatest([this.filterValues, this.rs.getSongs()]).pipe(
+      this.filteredSongs$ = 
+      combineLatest([this.filterValues, 
+        this.rs.getSongs()])
+        .pipe(
         map(([filterString, songs]) => {
-          let a = Object.values(songs).filter(song => song.song.toLowerCase().includes(filterString.toLowerCase()))
-          return a
+          return Object.values(songs)
+          .filter(song => song.song.toLowerCase()
+          .includes(filterString.toLowerCase()))
         })
       )
       this.filteredSongs$.subscribe(res => {
-        this.valueArray = res;
-        this.songs = res;
-        console.log('this.valueArray ', this.valueArray)
+        this.songs = res; 
       })
-
     }
     else {
       this.getSongs();
